@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gateway In</title>
+    <style>
+        body {
+            font-family: "century gothic";
+        }
+        #email_field, #password_field {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            background-color: rgb(14, 70, 102);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: rgb(14, 70, 102);;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 300px;
+        }
+
+        /* .loggedin-div {
+            display: none;
+        }
+         */
+        @media screen and (max-width: 700px) {
+            .container {
+                margin: 0 auto;
+                padding: 50px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .container {
+                margin: 0 auto;
+                padding: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="form">
+            <h3>Enter the Hunt</h3>
+            <input type="email" placeholder="Email..." id="email_field">
+            <input type="password" placeholder="Password..." id="password_field">
+
+            <button onclick="login()">Enter Quest</button>
+        </div>
+
+
+        <div id="user_div" class="loggedin-div">
+            <h3>Welcome User</h3>
+            <p>cnweoivnewoivnoi</p>
+            <button onclick="logout();">Logout</button>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAO4CQJVMGOKvev70U9hySvL7B2lLXbPvs",
+        authDomain: "thepass-9b1af.firebaseapp.com",
+        databaseURL: "https://thepass-9b1af.firebaseio.com",
+        projectId: "thepass-9b1af",
+        storageBucket: "thepass-9b1af.appspot.com",
+        messagingSenderId: "886980652659"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
